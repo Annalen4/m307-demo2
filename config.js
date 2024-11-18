@@ -18,7 +18,7 @@ export function createApp(dbconfig) {
     res.render("register");
   });
 
-  /*
+  
   app.post("/create_post", upload.single("image"), async function (req, res) {
     //const user = await login.loggedInUser(req);
     await app.locals.pool.query(
@@ -27,14 +27,14 @@ export function createApp(dbconfig) {
     );
     res.redirect("/");
   });
-*/
+
   app.post("/register", upload.none(), async (req, res) => {
     const user = await login.registerUser(req);
     if (user) {
-      res.redirect("/login");
+      res.redirect("/create");
       return;
     } else {
-      res.redirect("/register");
+      res.redirect("/create");
       return;
     }
   });
@@ -47,10 +47,10 @@ export function createApp(dbconfig) {
   app.post("/login", upload.none(), async (req, res) => {
     const user = await login.loginUser(req);
     if (!user) {
-      res.redirect("/login");
+      res.redirect("/create");
       return;
     } else {
-      res.redirect("/intern");
+      res.redirect("/create");
       return;
     }
   });
