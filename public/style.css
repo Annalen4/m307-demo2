@@ -6,7 +6,7 @@
 header,
 footer {
   background-color: pink;
-  padding: 12px;
+  padding: 15px;
 }
 
 p,
@@ -23,7 +23,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: white;
+  color: rgb(206, 206, 206);
 }
 
 .not-button {
@@ -55,6 +55,10 @@ a:hover {
   background-color: black;
   color: white;
 }
-#3 {
-  background-color: blue;
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2em;
 }

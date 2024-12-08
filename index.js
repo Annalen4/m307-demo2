@@ -1,3 +1,4 @@
+import { response } from "express";
 import { createApp } from "./config.js";
 
 const app = createApp({
@@ -32,6 +33,13 @@ app.get("/account", async function (req, res) {
 app.get("/", async function (req, res) {
   const posts = await app.locals.pool.query("select * from posts");
   res.render("start", { posts: posts.rows });
+});
+
+app.get("/post/:id", async function (req, res) {
+  const post = await app.locals.pool.query("SELECT * FROM posts WHERE id= $1", [
+    req.params.id,
+  ]);
+  res.render("details", { post: post.rows[0] });
 });
 
 /* Wichtig! Diese Zeilen müssen immer am Schluss der Website stehen! */
