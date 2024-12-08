@@ -1,9 +1,22 @@
+<h1> share your Picture here</h1>
+<p> share your Pictures here by posting a title, description and addachting a file </p>
+<br>
+
 <form action="/create_post" enctype="multipart/form-data" method="post">
-  <div>
+  <div class="form-line">
+    <p> Titel</p>
     <input type="text" name="titel" class="not-button" id="posts_titel" />
   </div>
-  <input type="file" name="inhalt" />
+  <div class="form-line">
+<p>Beschreibung</p>
+  <input type="text" name="beschreibung" class="not-button" id="posts_beschreibung">
+</div>
+<br>
+<input type="file" name="inhalt" />
   <div>
     <input type="submit" class="button" />
   </div>
+
 </form>
+<br>
+{{> footer}}

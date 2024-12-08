@@ -1,6 +1,10 @@
-<p> hier würde man sein Account und dessen Posts sehen...</p>
+<h2> Posts</h2>
 
 {{#posts}}
-  <a href="/post/{{id}}"> {{titel}} </a>
+ 
+<a href="/post/{{id}}"> <img src="/uploads/{{inhalt}}" class="bilder-übersicht"></a>
 
 {{/posts}}
+
+
+{{> footer}}

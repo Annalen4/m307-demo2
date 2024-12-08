@@ -1,13 +1,15 @@
-<h1>{{post.titel}}</h1>
+<p href="/posts/{{id}}">
+  <img src="/uploads/{{post.inhalt}}" alt="/construction.gif" width="150px" />
+</p>
 
-<p href="/posts{{id}}">
-  <img
-    src="/project/workspace/public/uploads/{{inhalt}}"
-    alt="../public/uploads/construction.gif"
-  /></p>
+<h1>{{post.titel}}</h1>
+<br>
+<p> {{Beschreibung}}</p>
+
+
+
+<br>
 
 <a href="/account" class="button">Zurück</a>
 
-{{footer}}
-
-
+{{>footer}}

@@ -1,11 +1,11 @@
 * {
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Amandine";
   margin: 0;
 }
 
 header,
 footer {
-  background-color: pink;
+  background-color: rgb(176, 191, 194);
   padding: 15px;
 }
 
@@ -26,6 +26,11 @@ a:hover {
   color: rgb(206, 206, 206);
 }
 
+#start {
+  padding-top: 10%;
+  background-color: rgb(176, 191, 194);
+}
+
 .not-button {
   margin-top: 10px;
   background-color: lightgrey;
@@ -43,11 +48,12 @@ a:hover {
 }
 
 .button {
-  background-color: pink;
+  background-color: rgb(176, 191, 194);
   box-shadow: none;
-  border-radius: 10%;
-  border: 0;
-  padding: 8px;
+  padding: 10px 15px 10px 15px;
+  border-radius: 40px;
+  border-width: 2px;
+  border-color: rgb(0, 0, 0);
   margin: 10px;
 }
 
@@ -56,9 +62,22 @@ a:hover {
   color: white;
 }
 
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 2em;
+#footer {
+  margin-top: 10%;
+  color: rgb(176, 191, 194);
+  position: sticky;
+}
+
+.bilder-übersicht {
+  width: 30vw;
+  margin: 5px;
+}
+
+header {
+  display: flex;
+  width: 90 vw;
+  justify-content: space-between;
+}
+.logo {
+  margin-right: 40vw;
 }
